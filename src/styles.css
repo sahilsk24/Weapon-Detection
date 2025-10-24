@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+:root{
+
+     --background-color:#F0F0F0 ;
+    --primary-color: #D9E9CF;
+    --secondary-color:#B6CEB4;
+    --third-color:#96A78D ;
+    --text-color:#4a5568;
+}
+[data-theme="isDark"]{
+--background-color: #0d0221;
+--primary-color: #a855f7;
+--secondary-color: #1e1135;
+--third-color: #c084fc;
+--text-color: #e9d5ff;
+}
+
+[data-theme="blue"]{
+    --background-color:#D0E8F2 ;
+    --primary-color: #A9D0EC;
+    --secondary-color:#7FB7D5;
+    --third-color:#507E9C ;
+    --text-color:#1E3A5F;
+}
+[data-theme="purple"]{
+    --background-color:#E6D0F2 ;
+    --primary-color: #C29AED;
+    --secondary-color:#A066E0;
+    --third-color:#7038C0 ;
+    --text-color:#3D0A8C;
+}
+[data-theme="red"]{
+    --background-color:#F2D0D0 ;
+    --primary-color: #ED9A9A;
+    --secondary-color:#E06666;
+    --third-color:#C03A3A ;
+    --text-color:#8C0A0A;
+}
+[data-theme="default"]{
+    --background-color:#F0F0F0 ;
+    --primary-color: #D9E9CF;
+    --secondary-color:#B6CEB4;
+    --third-color:#96A78D ;
+    --text-color:#4a5568;
+}

@@ -1,0 +1,21 @@
+
+<div class="nav">
+  <a routerLink="/" class="logo">Weapon Ai</a>
+
+      <select class="theme-select" [(ngModel)]="currentTheme" (change)="changeTheme(currentTheme)">
+    <option value="default">Default</option>
+    <option value="blue">Blue</option>
+    <option value="purple">Purple</option>
+    <option value="red">Red</option>
+    <option value="isDark">Dark</option>
+  </select>
+  
+  <div class="menu-toggle" (click)="toggleMenu()">☰</div>
+
+  <div class="links" [class.active]="isMenuActive">
+    <a routerLink="/home" >Home</a>
+    <a routerLink="/detect" >DetectAi</a>
+    <a routerLink="/about" >About</a>
+    <a routerLink="/contact-us" >Contact</a>
+  </div>
+</div>

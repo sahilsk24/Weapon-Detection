@@ -1,0 +1,48 @@
+<section>
+  <h3>Weapon Detection System</h3>
+  <div class="container">
+<div class="live">
+  <h4><i class="fa-regular fa-camera" style="color: #96a78d;"></i> Live Camera Detection</h4>
+
+  <div class="controls">
+    <button (click)="startCamera()" [disabled]="cameraActive">Start Camera</button>
+    <button (click)="stopCamera()" [disabled]="!cameraActive">Stop Camera</button>
+  </div>
+
+  <div class="camera-feed" *ngIf="cameraActive">
+    <img [src]="videoUrl" alt="Live Camera Feed" width="640" height="480" />
+    <p>{{ detectionMessage }}</p>
+  </div>
+
+  <div class="detected-images">
+    <h5>Detected Images</h5>
+    <div class="images">
+      <img *ngFor="let img of detectedImages" [src]="img" width="200" />
+    </div>
+  </div>
+</div>
+
+
+    <div class="image">
+      <h4><i class="fa-solid fa-upload" style="color: #96a78d;"></i> Image Upload</h4>
+      <input type="file" id="fileUpload" hidden (change)="onFileSelected($event)">
+      <label for="fileUpload" class="upload-label">Choose Image</label>
+
+      <button (click)="uploadImage()">Upload Image</button>
+
+      <div class="preview" *ngIf="previewUrl">
+        <h5>Original Image:</h5>
+        <img [src]="previewUrl" alt="preview" width="300">
+      </div>
+
+      <div class="result" *ngIf="resultUrl">
+        <h5>Detected Image:</h5>
+        <img [src]="resultUrl" alt="result" width="300">
+      </div>
+
+      <div *ngIf="loading">
+        <p>Detecting weapons... please wait.</p>
+      </div>
+    </div>
+  </div>
+</section>
